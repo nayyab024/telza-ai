@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fillo — by Telza</title>
+  <!-- EDIT: replace with Fillo's real meta description -->
+  <meta name="description" content="Fillo by Telza. Add Fillo's one-sentence product description here.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="assets/telza-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fillo.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script src="script.js" defer></script>
+  <script src="fillo.js" defer></script>
+</head>
+<body class="page-fillo">
+  <!--
+    FILLO PAGE: CONTENT STATUS
+    No Fillo product information existed in the project, so every product-specific
+    detail on this page (what Fillo does, features, steps, benefits, use cases,
+    integrations, FAQ answers, dashboard numbers) is PLACEHOLDER copy.
+    Search this file for "EDIT:" to find each block to replace with real content.
+  -->
+
+  <!-- ============ Icon sprite ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+    <symbol id="i-phone-in" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M16 2v6h6M22 2l-6 6"/></symbol>
+    <symbol id="i-phone-out" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M16 2h6v6M16 8l6-6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2V10z"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7z"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 20V6M2 14h20v6M22 14v-3a3 3 0 0 0-3-3h-8v6"/><circle cx="6.5" cy="10.5" r="1.5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2l10 5-10 5L2 7l10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM20 17v4H6.5a2.5 2.5 0 0 1 0-5"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ============ Header (shared with homepage) ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__crop"><img src="assets/telza-logo.png" alt="Telza AI home" width="362" height="207"></span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link is-current" type="button" aria-expanded="false" aria-controls="dd-solutions">Products <svg class="icon icon--sm nav__chev"><use href="#i-chevron"/></svg></button>
+            <div class="dropdown dropdown--wide" id="dd-solutions">
+              <a class="dropdown__item" href="ai-voice-agent.html"><span class="dropdown__icon"><svg class="icon"><use href="#i-mic"/></svg></span><span><strong>AI Voice Agents</strong><small>Human-like agents for every call</small></span></a>
+              <a class="dropdown__item" href="index.html#inbound"><span class="dropdown__icon"><svg class="icon"><use href="#i-phone-in"/></svg></span><span><strong>Inbound Calling</strong><small>Answer every call on the first ring</small></span></a>
+              <a class="dropdown__item" href="index.html#outbound"><span class="dropdown__icon"><svg class="icon"><use href="#i-phone-out"/></svg></span><span><strong>Outbound Calling</strong><small>Campaigns that scale on demand</small></span></a>
+              <a class="dropdown__item" href="index.html#whatsapp"><span class="dropdown__icon"><svg class="icon"><use href="#i-chat"/></svg></span><span><strong>WhatsApp Automation</strong><small>Chat, book and sell on WhatsApp</small></span></a>
+              <a class="dropdown__item dropdown__item--product" href="fillo.html" aria-current="page"><span class="dropdown__icon"><svg class="icon"><use href="#i-layers"/></svg></span><span><strong>Fillo</strong><small>Explore our Fillo product</small></span></a>
+              <div class="dropdown__footer"><a href="index.html#solutions">View all solutions <svg class="icon icon--sm"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="index.html#features">Features</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link" type="button" aria-expanded="false" aria-controls="dd-industries">Industries <svg class="icon icon--sm nav__chev"><use href="#i-chevron"/></svg></button>
+            <div class="dropdown" id="dd-industries">
+              <a class="dropdown__item" href="index.html#industries"><span class="dropdown__icon"><svg class="icon"><use href="#i-heart"/></svg></span><span><strong>Healthcare</strong></span></a>
+              <a class="dropdown__item" href="index.html#industries"><span class="dropdown__icon"><svg class="icon"><use href="#i-home"/></svg></span><span><strong>Real Estate</strong></span></a>
+              <a class="dropdown__item" href="index.html#industries"><span class="dropdown__icon"><svg class="icon"><use href="#i-cart"/></svg></span><span><strong>E-commerce</strong></span></a>
+              <a class="dropdown__item" href="index.html#industries"><span class="dropdown__icon"><svg class="icon"><use href="#i-bank"/></svg></span><span><strong>Finance</strong></span></a>
+              <a class="dropdown__item" href="index.html#industries"><span class="dropdown__icon"><svg class="icon"><use href="#i-bed"/></svg></span><span><strong>Hospitality</strong></span></a>
+              <a class="dropdown__item" href="index.html#industries"><span class="dropdown__icon"><svg class="icon"><use href="#i-truck"/></svg></span><span><strong>Logistics</strong></span></a>
+            </div>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="index.html#how-it-works">How it works</a></li>
+          <li class="nav__item"><a class="nav__link" href="index.html#integrations">Integrations</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link" type="button" aria-expanded="false" aria-controls="dd-resources">Resources <svg class="icon icon--sm nav__chev"><use href="#i-chevron"/></svg></button>
+            <div class="dropdown" id="dd-resources">
+              <a class="dropdown__item" href="index.html#testimonials"><span class="dropdown__icon"><svg class="icon"><use href="#i-star"/></svg></span><span><strong>Customer stories</strong><small>How teams use Telza</small></span></a>
+              <a class="dropdown__item" href="#faq"><span class="dropdown__icon"><svg class="icon"><use href="#i-book"/></svg></span><span><strong>FAQ</strong><small>Answers to common questions</small></span></a>
+              <a class="dropdown__item" href="#cta"><span class="dropdown__icon"><svg class="icon"><use href="#i-calendar"/></svg></span><span><strong>Book a demo</strong><small>Talk to our team</small></span></a>
+            </div>
+          </li>
+        </ul>
+        <div class="nav__mobile-cta">
+          <a href="#cta" class="btn btn--primary">Book a demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#cta" class="btn btn--primary btn--sm">Book a demo</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero hero--fillo" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="aurora"></div>
+        <canvas class="hero__network"></canvas>
+        <div class="blob blob--teal" data-parallax="0.18"></div>
+        <div class="blob blob--green" data-parallax="0.08"></div>
+        <div class="grid-lines"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#solutions">Solutions</a><span aria-hidden="true">/</span><span aria-current="page">Fillo</span>
+          </nav>
+          <span class="fillo-brand reveal"><span class="fillo-brand__mark" aria-hidden="true"><svg class="icon"><use href="#i-layers"/></svg></span>Fillo <small>by Telza</small></span>
+          <!-- EDIT: replace the headline and supporting text with Fillo's real value proposition -->
+          <h1 class="hero__title reveal" data-delay="1">Meet <span class="text-gradient">Fillo</span>. Your product headline goes here.</h1>
+          <p class="hero__lead reveal" data-delay="2">Add Fillo's value proposition in one or two sentences: who it is for, the problem it solves and the result your customers get.</p>
+          <div class="hero__actions reveal" data-delay="3">
+            <a href="#cta" class="btn btn--primary btn--lg">Book a Fillo demo <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a href="#showcase" class="btn btn--ghost btn--lg"><span class="btn__play"><svg class="icon"><use href="#i-play"/></svg></span> Explore the product</a>
+          </div>
+          <!-- EDIT: three short proof points about Fillo (or remove) -->
+          <ul class="hero__trust reveal" data-delay="4">
+            <li><svg class="icon"><use href="#i-check"/></svg>Proof point one</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Proof point two</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Proof point three</li>
+          </ul>
+        </div>
+
+        <!-- Product preview (illustrative UI with sample data) -->
+        <div class="hero__visual reveal" data-delay="2">
+          <div class="fapp" role="img" aria-label="Illustrative preview of the Fillo workspace with sample data">
+            <div class="fapp__bar">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="fapp__title"><span class="fillo-brand__mark fillo-brand__mark--sm"><svg class="icon"><use href="#i-layers"/></svg></span>Fillo workspace</span>
+              <span class="fapp__sample">Sample data</span>
+            </div>
+            <div class="fapp__body">
+              <aside class="fapp__side" aria-hidden="true">
+                <span class="is-active"><svg class="icon"><use href="#i-grid"/></svg></span>
+                <span><svg class="icon"><use href="#i-chart"/></svg></span>
+                <span><svg class="icon"><use href="#i-layers"/></svg></span>
+                <span><svg class="icon"><use href="#i-sliders"/></svg></span>
+              </aside>
+              <div class="fapp__main">
+                <div class="fapp__greet"><strong>Overview</strong><small>Updated just now</small></div>
+                <div class="fapp__kpis">
+                  <div class="fapp__kpi"><small>Metric A</small><strong data-fapp-count="1280">1,280</strong><i style="--w:72%"></i></div>
+                  <div class="fapp__kpi"><small>Metric B</small><strong data-fapp-count="86" data-suffix="%">86%</strong><i style="--w:86%"></i></div>
+                  <div class="fapp__kpi"><small>Metric C</small><strong data-fapp-count="342">342</strong><i style="--w:48%"></i></div>
+                </div>
+                <div class="fapp__chart">
+                  <svg viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">
+                    <defs><linearGradient id="fappFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14C9B8" stop-opacity=".4"/><stop offset="1" stop-color="#14C9B8" stop-opacity="0"/></linearGradient></defs>
+                    <path fill="url(#fappFill)" d="M0 82 C25 78 40 60 70 64 S115 40 140 46 S190 22 215 30 S265 12 300 8 V100 H0Z"/>
+                    <path class="fapp__line" d="M0 82 C25 78 40 60 70 64 S115 40 140 46 S190 22 215 30 S265 12 300 8"/>
+                  </svg>
+                </div>
+                <ul class="fapp__feed" data-fapp-feed>
+                  <li><span class="fapp__dot"></span>Sample activity item<time>now</time></li>
+                  <li><span class="fapp__dot fapp__dot--teal"></span>Another sample activity<time>2m</time></li>
+                  <li><span class="fapp__dot fapp__dot--muted"></span>Earlier sample activity<time>8m</time></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="float-chip float-chip--1" data-depth="22"><span class="chip-icon chip-icon--green"><svg class="icon"><use href="#i-check"/></svg></span><div><strong>Task completed</strong><small>Sample notification</small></div></div>
+          <div class="float-chip float-chip--2" data-depth="-16"><span class="chip-icon"><svg class="icon"><use href="#i-spark"/></svg></span><div><strong>AI suggestion</strong><small>Sample notification</small></div></div>
+          <div class="float-chip float-chip--3" data-depth="12"><span class="chip-icon"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>Report ready</strong><small>Sample notification</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ What is Fillo (value proposition + demo) ============ -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What is Fillo</span>
+          <!-- EDIT: product description -->
+          <h2 class="section-title">One clear sentence about what Fillo does</h2>
+          <p class="section-lead">Use this paragraph to describe Fillo in plain language: the job it does, who uses it and why it matters. Two or three sentences work best.</p>
+        </div>
+
+        <!--
+          FILLO LIVE VOICE AGENT DEMO
+          An animated, audio-capable call demo (fillo.js → initVoiceDemo). The conversation is in FD_TURNS.
+          Audio (muted by default): uses recorded ElevenLabs clips from assets/audio/fillo-demo/turn-1.mp3 … turn-10.mp3
+          when present (create them with tools/generate-fillo-demo-audio.ps1), otherwise the browser's built-in voices.
+        -->
+        <div class="fvideo fdemo-wrap reveal" data-fdemo>
+          <div class="fvideo__frame">
+            <span class="fvideo__chrome" aria-hidden="true">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="fvideo__chrome-title"><span class="fillo-brand__mark fillo-brand__mark--sm"><svg class="icon"><use href="#i-layers"/></svg></span>Fillo · Live voice agent demo</span>
+              <span class="fdemo__live" data-fd-live><i></i>Demo</span>
+            </span>
+
+            <div class="fdemo" data-fd-stage role="region" aria-label="Animated demo of a Fillo AI voice agent phone call">
+              <div class="fdemo__bg" aria-hidden="true"><span></span><span></span></div>
+
+              <!-- Phone call interface -->
+              <div class="fphone" aria-hidden="true">
+                <div class="fphone__body">
+                  <div class="fphone__island"></div>
+                  <div class="fphone__status"><span>9:41</span><span class="fphone__sig"><i></i><i></i><i></i><i></i></span></div>
+                  <span class="fphone__label" data-fd-status>Ready</span>
+                  <div class="forb" data-fd-orb>
+                    <span class="forb__halo"></span>
+                    <span class="forb__ring"></span><span class="forb__ring forb__ring--2"></span>
+                    <span class="forb__core"><span class="forb__blob forb__blob--1"></span><span class="forb__blob forb__blob--2"></span><span class="forb__blob forb__blob--3"></span></span>
+                  </div>
+                  <strong class="fphone__name">Fillo AI Assistant</strong>
+                  <span class="fphone__sub">Front desk · AI voice agent</span>
+                  <span class="fphone__timer" data-fd-timer>00:00</span>
+                  <div class="fwave" data-fd-wave></div>
+                  <span class="fphone__speaking" data-fd-speaking><i></i><span>Press play to start the call</span></span>
+                </div>
+              </div>
+
+              <!-- Live transcript -->
+              <div class="ftrans">
+                <div class="ftrans__head">
+                  <span class="ftrans__title"><i></i>Live transcript</span>
+                  <span class="ftrans__pills"><span class="fpill" data-fd-latency>Response —</span><span class="fpill">English</span></span>
+                </div>
+                <div class="ftrans__list" data-fd-list aria-live="polite"></div>
+                <div class="ftrans__foot">
+                  <span><small>Intent</small><strong data-fd-intent>Listening…</strong></span>
+                  <span><small>Outcome</small><strong data-fd-outcome>In progress</strong></span>
+                  <span><small>Sentiment</small><strong data-fd-sentiment>—</strong></span>
+                </div>
+              </div>
+
+              <!-- Start overlay (shown until the demo starts) -->
+              <button type="button" class="fdemo__start" data-fd-start aria-label="Play the Fillo voice agent demo">
+                <span class="fvideo__play"><span class="fvideo__ring"></span><span class="fvideo__ring fvideo__ring--2"></span><svg class="icon"><use href="#i-play"/></svg></span>
+                <span class="fdemo__start-label">Watch Fillo take a call</span>
+              </button>
+            </div>
+
+            <!-- Player controls (all functional) -->
+            <div class="fdemo__controls">
+              <button type="button" class="fdemo__btn" data-fd-toggle aria-label="Play demo">
+                <svg class="icon fd-i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg>
+                <svg class="icon fd-i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+              </button>
+              <button type="button" class="fdemo__btn" data-fd-restart aria-label="Restart demo">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              </button>
+              <div class="fdemo__track" data-fd-track role="group" aria-label="Conversation turns"></div>
+              <span class="fdemo__time" data-fd-clock>00:00</span>
+              <button type="button" class="fdemo__btn fdemo__sound" data-fd-sound aria-pressed="false" aria-label="Turn sound on">
+                <svg class="icon fd-i-muted" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
+                <svg class="icon fd-i-sound" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <span data-fd-sound-label>Sound off</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDIT: three value propositions -->
+        <div class="fvalues">
+          <article class="card glow-card reveal">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-target"/></svg></span>
+            <h3>Value proposition one</h3>
+            <p>Explain the first core benefit of Fillo and the problem it removes.</p>
+          </article>
+          <article class="card glow-card reveal" data-delay="1">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-bolt"/></svg></span>
+            <h3>Value proposition two</h3>
+            <p>Explain the second core benefit and how it saves time or effort.</p>
+          </article>
+          <article class="card glow-card reveal" data-delay="2">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-chart"/></svg></span>
+            <h3>Value proposition three</h3>
+            <p>Explain the third core benefit and the outcome customers can expect.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How it works: Fillo's call journey (interactive) ============ -->
+    <section class="section journey-section" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 class="section-title" id="journey-title">From the first ring to a booked appointment</h2>
+          <p class="section-lead">Follow one call through Fillo, step by step. This is what happens every time a customer calls your business.</p>
+        </div>
+
+        <div class="journey reveal" data-journey>
+          <!-- Timeline -->
+          <div class="journey__rail" role="group" aria-label="How Fillo handles a call">
+            <span class="journey__line" aria-hidden="true"><span class="journey__line-fill"></span><span class="journey__line-flow"></span></span>
+            <button type="button" class="journey__step is-active" data-jstep="0" aria-controls="jpanel-0" aria-pressed="true">
+              <span class="journey__node"><span>01</span><i class="journey__progress"></i></span>
+              <span class="journey__label"><small>Step 01</small><strong>Call connects</strong></span>
+            </button>
+            <button type="button" class="journey__step" data-jstep="1" aria-controls="jpanel-1" aria-pressed="false">
+              <span class="journey__node"><span>02</span><i class="journey__progress"></i></span>
+              <span class="journey__label"><small>Step 02</small><strong>AI understands</strong></span>
+            </button>
+            <button type="button" class="journey__step" data-jstep="2" aria-controls="jpanel-2" aria-pressed="false">
+              <span class="journey__node"><span>03</span><i class="journey__progress"></i></span>
+              <span class="journey__label"><small>Step 03</small><strong>AI takes action</strong></span>
+            </button>
+            <button type="button" class="journey__step" data-jstep="3" aria-controls="jpanel-3" aria-pressed="false">
+              <span class="journey__node"><span>04</span><i class="journey__progress"></i></span>
+              <span class="journey__label"><small>Step 04</small><strong>Task completed</strong></span>
+            </button>
+          </div>
+
+          <!-- Stage: one panel per step (text + animated mini interface) -->
+          <div class="journey__stage" aria-live="polite">
+            <div class="journey__glow" aria-hidden="true"></div>
+
+            <!-- 01 Call connects -->
+            <article class="jpanel is-active" id="jpanel-0" data-jpanel="0">
+              <div class="jpanel__text">
+                <span class="jpanel__num">01</span>
+                <h3>A customer calls. Fillo picks up instantly.</h3>
+                <p>No hold music, no voicemail and no missed calls. Fillo answers on the first ring, day or night, and greets every caller in a natural, friendly voice.</p>
+                <ul class="jpanel__list">
+                  <li><svg class="icon"><use href="#i-check"/></svg>Answers on the first ring, 24/7</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Greets the caller naturally</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>No queues, even at busy times</li>
+                </ul>
+              </div>
+              <div class="jpanel__visual" aria-hidden="true">
+                <div class="jcall">
+                  <span class="jcall__ripple"></span><span class="jcall__ripple jcall__ripple--2"></span><span class="jcall__ripple jcall__ripple--3"></span>
+                  <div class="jcall__card">
+                    <span class="jcall__state jcall__state--in"><i></i>Incoming call</span>
+                    <span class="jcall__state jcall__state--on"><i></i>Answered by Fillo</span>
+                    <span class="jcall__avatar"><svg class="icon"><use href="#i-users"/></svg></span>
+                    <strong class="jcall__name">Customer</strong>
+                    <span class="jcall__meta">Mobile · New caller</span>
+                    <div class="jcall__actions">
+                      <span class="jcall__btn jcall__btn--decline"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+                      <span class="jcall__btn jcall__btn--accept"><svg class="icon"><use href="#i-phone-in"/></svg></span>
+                    </div>
+                  </div>
+                  <span class="jchip jchip--a"><svg class="icon"><use href="#i-clock"/></svg>Answered on 1st ring</span>
+                  <span class="jchip jchip--b"><span class="fillo-brand__mark fillo-brand__mark--sm"><svg class="icon"><use href="#i-layers"/></svg></span>"Hello! How can I help?"</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 02 AI understands -->
+            <article class="jpanel" id="jpanel-1" data-jpanel="1">
+              <div class="jpanel__text">
+                <span class="jpanel__num">02</span>
+                <h3>Fillo listens and understands what the caller needs.</h3>
+                <p>As the caller speaks, Fillo turns their words into meaning. It recognises what they want, picks out details like the day and time, and keeps the conversation flowing naturally.</p>
+                <ul class="jpanel__list">
+                  <li><svg class="icon"><use href="#i-check"/></svg>Understands natural, everyday speech</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Identifies the request and key details</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Asks follow-up questions when needed</li>
+                </ul>
+              </div>
+              <div class="jpanel__visual" aria-hidden="true">
+                <div class="jlisten">
+                  <div class="jlisten__head"><span class="jlisten__live"><i></i>Listening</span><span class="jlisten__who">Caller speaking</span></div>
+                  <div class="jlisten__wave" data-jwave></div>
+                  <p class="jlisten__text" data-jtype>Hi, I'd like to book an appointment for tomorrow afternoon.</p>
+                  <div class="jlisten__chips">
+                    <span class="jtag"><small>Intent</small>Book appointment</span>
+                    <span class="jtag"><small>Day</small>Tomorrow</span>
+                    <span class="jtag"><small>Time</small>Afternoon</span>
+                  </div>
+                  <div class="jlisten__reply"><span class="fillo-brand__mark fillo-brand__mark--sm"><svg class="icon"><use href="#i-layers"/></svg></span>"Absolutely! Let me check what's available."</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 03 AI takes action -->
+            <article class="jpanel" id="jpanel-2" data-jpanel="2">
+              <div class="jpanel__text">
+                <span class="jpanel__num">03</span>
+                <h3>Fillo takes action while the caller is still on the line.</h3>
+                <p>Fillo checks availability, offers the open time slots and books the one the caller chooses, all within the same conversation.</p>
+                <ul class="jpanel__list">
+                  <li><svg class="icon"><use href="#i-check"/></svg>Checks available time slots</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Offers options and confirms the choice</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Books the appointment during the call</li>
+                </ul>
+              </div>
+              <div class="jpanel__visual" aria-hidden="true">
+                <div class="jcal">
+                  <div class="jcal__head"><span><svg class="icon"><use href="#i-calendar"/></svg>Tomorrow · Afternoon</span><span class="jcal__status"><i></i><b class="jcal__status-a">Checking slots…</b><b class="jcal__status-b">Slot selected</b><b class="jcal__status-c">Booked</b></span></div>
+                  <div class="jcal__slots">
+                    <span class="jslot jslot--busy">1:00 PM<small>Unavailable</small></span>
+                    <span class="jslot jslot--open">2:00 PM<small>Available</small></span>
+                    <span class="jslot jslot--pick">3:30 PM<small>Available</small></span>
+                    <span class="jslot jslot--busy">4:30 PM<small>Unavailable</small></span>
+                  </div>
+                  <div class="jcal__bar"><span></span></div>
+                  <div class="jcal__confirm"><svg class="icon"><use href="#i-check"/></svg>Appointment booked for tomorrow at 3:30 PM</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 04 Task completed -->
+            <article class="jpanel" id="jpanel-3" data-jpanel="3">
+              <div class="jpanel__text">
+                <span class="jpanel__num">04</span>
+                <h3>The task is done, and every call is summarised.</h3>
+                <p>The caller hangs up with their appointment confirmed. You get a clear record of the call: what was asked, what was done and how long it took.</p>
+                <ul class="jpanel__list">
+                  <li><svg class="icon"><use href="#i-check"/></svg>Request completed in a single call</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Clear summary of every conversation</li>
+                  <li><svg class="icon"><use href="#i-check"/></svg>Call insights for your team</li>
+                </ul>
+              </div>
+              <div class="jpanel__visual" aria-hidden="true">
+                <div class="jdone">
+                  <div class="jdone__badge">
+                    <svg viewBox="0 0 52 52"><circle class="jdone__circle" cx="26" cy="26" r="23"/><path class="jdone__tick" d="M15 27l7 7 15-16"/></svg>
+                  </div>
+                  <strong class="jdone__title">Call completed</strong>
+                  <div class="jdone__card">
+                    <div class="jdone__row"><span><svg class="icon"><use href="#i-calendar"/></svg>Outcome</span><b>Appointment booked</b></div>
+                    <div class="jdone__row"><span><svg class="icon"><use href="#i-clock"/></svg>When</span><b>Tomorrow, 3:30 PM</b></div>
+                    <div class="jdone__row"><span><svg class="icon"><use href="#i-chat"/></svg>Request</span><b>New appointment</b></div>
+                    <div class="jdone__row"><span><svg class="icon"><use href="#i-chart"/></svg>Call duration</span><b>02:14</b></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="journey__nav">
+            <button type="button" class="fdemo__btn" data-jprev aria-label="Previous step"><svg class="icon icon--flip"><use href="#i-arrow"/></svg></button>
+            <span class="journey__count"><b data-jcount>01</b> / 04</span>
+            <button type="button" class="fdemo__btn" data-jnext aria-label="Next step"><svg class="icon"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ What Fillo does: Answer · Assist · Convert ============ -->
+    <section class="section pillars-section" id="what-fillo-does" aria-labelledby="pillars-title">
+      <div class="pillars-section__lines" aria-hidden="true">
+        <svg viewBox="0 0 1440 600" preserveAspectRatio="none"><path d="M-20 420 C 360 300, 720 520, 1460 260"/><path d="M-20 470 C 420 360, 820 560, 1460 330"/><path d="M-20 520 C 480 420, 900 600, 1460 400"/></svg>
+      </div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What Fillo does</span>
+          <h2 class="pillars-title" id="pillars-title"><span>Answer.</span> <span>Assist.</span> <span class="text-gradient">Convert.</span></h2>
+          <p class="section-lead">One AI voice agent that handles the whole customer conversation, from the moment the phone rings to the moment an appointment is booked.</p>
+        </div>
+
+        <div class="pillars reveal" data-pillars>
+          <!-- Left: pillar tabs -->
+          <div class="pillars__tabs" role="group" aria-label="What Fillo does">
+            <span class="pillars__indicator" aria-hidden="true"></span>
+            <button type="button" class="ptab is-active" data-ptab="0" aria-pressed="true" aria-controls="ppanel-0">
+              <span class="ptab__num">01</span>
+              <span class="ptab__body"><strong>Answer</strong><small>Every call picked up, day or night</small></span>
+            </button>
+            <button type="button" class="ptab" data-ptab="1" aria-pressed="false" aria-controls="ppanel-1">
+              <span class="ptab__num">02</span>
+              <span class="ptab__body"><strong>Assist</strong><small>Clear answers to customer questions</small></span>
+            </button>
+            <button type="button" class="ptab" data-ptab="2" aria-pressed="false" aria-controls="ppanel-2">
+              <span class="ptab__num">03</span>
+              <span class="ptab__body"><strong>Convert</strong><small>Conversations turned into bookings</small></span>
+            </button>
+          </div>
+
+          <!-- Centre: illustrated canvas (one animated scene per pillar) -->
+          <div class="pcanvas" data-pcanvas aria-hidden="true">
+            <div class="pcanvas__inner">
+              <!-- Answer -->
+              <div class="pscene pscene--answer is-active" data-pscene="0">
+                <div class="pdial">
+                  <span class="pdial__ring"></span>
+                  <span class="pdial__sweep"></span>
+                  <span class="pdial__label"><b>24/7</b><small>Always on</small></span>
+                </div>
+                <div class="pcalls">
+                  <div class="pcall"><span class="pcall__icon"><svg class="icon"><use href="#i-phone-in"/></svg></span><span class="pcall__text"><b>Incoming call</b><small>Weekday · 9:02 AM</small></span><span class="pcall__state"><i class="pcall__ring">Ringing…</i><i class="pcall__ok">Answered by Fillo</i></span></div>
+                  <div class="pcall"><span class="pcall__icon"><svg class="icon"><use href="#i-phone-in"/></svg></span><span class="pcall__text"><b>Incoming call</b><small>After hours · 7:45 PM</small></span><span class="pcall__state"><i class="pcall__ring">Ringing…</i><i class="pcall__ok">Answered by Fillo</i></span></div>
+                  <div class="pcall"><span class="pcall__icon"><svg class="icon"><use href="#i-phone-in"/></svg></span><span class="pcall__text"><b>Incoming call</b><small>Weekend · 11:15 AM</small></span><span class="pcall__state"><i class="pcall__ring">Ringing…</i><i class="pcall__ok">Answered by Fillo</i></span></div>
+                </div>
+              </div>
+
+              <!-- Assist -->
+              <div class="pscene pscene--assist" data-pscene="1">
+                <svg class="passist__link" viewBox="0 0 400 300" preserveAspectRatio="none"><path id="passist-path" d="M120 214 C 200 214, 210 120, 300 118"/><circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#passist-path"/></animateMotion></circle></svg>
+                <div class="pqa">
+                  <div class="pbubble pbubble--caller"><small>Caller</small>Hi, can you tell me about your services?</div>
+                  <div class="pbubble pbubble--fillo"><small><span class="fillo-brand__mark fillo-brand__mark--sm"><svg class="icon"><use href="#i-layers"/></svg></span>Fillo</small><span class="pbubble__dots"><i></i><i></i><i></i></span><span class="pbubble__text">Of course! I'd be happy to help. What would you like to know?</span></div>
+                </div>
+                <div class="pkb">
+                  <span class="pkb__title"><svg class="icon"><use href="#i-book"/></svg>Your business info</span>
+                  <span class="pkb__item">Services &amp; offerings</span>
+                  <span class="pkb__item">Opening hours</span>
+                  <span class="pkb__item">Location &amp; contact</span>
+                </div>
+              </div>
+
+              <!-- Convert -->
+              <div class="pscene pscene--convert" data-pscene="2">
+                <svg class="pconvert__path" viewBox="0 0 420 260" preserveAspectRatio="none">
+                  <path class="pconvert__base" id="pconvert-path" d="M30 210 C 120 210, 140 70, 210 70 S 300 190, 390 60"/>
+                  <path class="pconvert__glow" d="M30 210 C 120 210, 140 70, 210 70 S 300 190, 390 60"/>
+                  <circle class="pconvert__dot" r="6"><animateMotion dur="3s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#pconvert-path"/></animateMotion></circle>
+                </svg>
+                <span class="pstage pstage--1"><i></i>Inquiry</span>
+                <span class="pstage pstage--2"><i></i>Times offered</span>
+                <span class="pstage pstage--3"><i></i>Booked</span>
+                <div class="pticket">
+                  <span class="pticket__icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+                  <span><b>Appointment booked</b><small>Tomorrow · 10:00 AM</small></span>
+                  <span class="pticket__check"><svg class="icon"><use href="#i-check"/></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: details -->
+          <div class="pillars__details">
+            <div class="ppanel is-active" id="ppanel-0" data-ppanel="0">
+              <h3>Never miss another customer call</h3>
+              <p>Fillo answers every incoming call instantly, including evenings, weekends and the busy moments when your team can't get to the phone.</p>
+              <ul class="ppanel__list">
+                <li><span><svg class="icon"><use href="#i-clock"/></svg></span>Available 24/7, every day of the year</li>
+                <li><span><svg class="icon"><use href="#i-phone-in"/></svg></span>Picks up on the first ring, with no hold queues</li>
+                <li><span><svg class="icon"><use href="#i-mic"/></svg></span>Greets every caller in a natural, friendly voice</li>
+              </ul>
+            </div>
+            <div class="ppanel" id="ppanel-1" data-ppanel="1" hidden>
+              <h3>Help every caller get what they need</h3>
+              <p>Customers can ask about your services and get clear, friendly answers based on the information you provide about your business.</p>
+              <ul class="ppanel__list">
+                <li><span><svg class="icon"><use href="#i-chat"/></svg></span>Answers common questions about your services</li>
+                <li><span><svg class="icon"><use href="#i-spark"/></svg></span>Asks follow-up questions to understand the request</li>
+                <li><span><svg class="icon"><use href="#i-users"/></svg></span>Keeps every conversation natural and on topic</li>
+              </ul>
+            </div>
+            <div class="ppanel" id="ppanel-2" data-ppanel="2" hidden>
+              <h3>Turn conversations into bookings</h3>
+              <p>When a caller is ready, Fillo offers available times and books the appointment during the same call, so interest never goes cold.</p>
+              <ul class="ppanel__list">
+                <li><span><svg class="icon"><use href="#i-calendar"/></svg></span>Offers available appointment times</li>
+                <li><span><svg class="icon"><use href="#i-check"/></svg></span>Confirms the booking with the caller</li>
+                <li><span><svg class="icon"><use href="#i-target"/></svg></span>Ends every call with a clear outcome</li>
+              </ul>
+            </div>
+            <a href="#overview" class="sys-link pillars__link">See Fillo take a call <svg class="icon icon--sm"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Key features ============ -->
+    <section class="section section--alt" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Key features</span>
+          <h2 class="section-title">Everything Fillo brings to your team</h2>
+          <p class="section-lead">An overview of Fillo's main capabilities. Replace each card with a real feature.</p>
+        </div>
+        <!-- EDIT: six features (title + one-line description each) -->
+        <div class="bento">
+          <article class="card glow-card card--wide feature-split reveal">
+            <div>
+              <span class="card__icon"><svg class="icon icon--lg"><use href="#i-spark"/></svg></span>
+              <h3>Headline feature</h3>
+              <p>Describe Fillo's most important capability here. This wide card is the best place for the feature you want visitors to remember.</p>
+            </div>
+            <div class="feature-visual fbars" aria-hidden="true"><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:80%"></i><i style="--h:66%"></i><i style="--h:92%"></i><i style="--h:74%"></i></div>
+          </article>
+          <article class="card glow-card reveal" data-delay="1">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-layers"/></svg></span>
+            <h3>Feature two</h3>
+            <p>One-line description of this capability.</p>
+          </article>
+          <article class="card glow-card reveal">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-bolt"/></svg></span>
+            <h3>Feature three</h3>
+            <p>One-line description of this capability.</p>
+          </article>
+          <article class="card glow-card reveal" data-delay="1">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-users"/></svg></span>
+            <h3>Feature four</h3>
+            <p>One-line description of this capability.</p>
+          </article>
+          <article class="card glow-card reveal" data-delay="2">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-shield"/></svg></span>
+            <h3>Feature five</h3>
+            <p>One-line description of this capability.</p>
+          </article>
+          <article class="card glow-card reveal">
+            <span class="card__icon"><svg class="icon icon--lg"><use href="#i-clock"/></svg></span>
+            <h3>Feature six</h3>
+            <p>One-line description of this capability.</p>
+          </article>
+          <article class="card glow-card card--wide feature-split reveal" data-delay="1">
+            <div>
+              <span class="card__icon"><svg class="icon icon--lg"><use href="#i-chart"/></svg></span>
+              <h3>Reporting &amp; insights feature</h3>
+              <p>If Fillo includes analytics or reporting, describe it here. Otherwise replace this card with another key capability.</p>
+            </div>
+            <div class="feature-visual">
+              <svg class="area-chart" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true">
+                <defs><linearGradient id="fAreaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14C9B8" stop-opacity=".45"/><stop offset="1" stop-color="#14C9B8" stop-opacity="0"/></linearGradient></defs>
+                <path class="area-chart__grid" d="M0 35H300M0 70H300M0 105H300"/>
+                <path fill="url(#fAreaFill)" d="M0 118 C30 108 50 96 75 100 S120 72 150 74 S200 42 225 48 S270 22 300 16 V140 H0Z"/>
+                <path class="area-chart__line" d="M0 118 C30 108 50 96 75 100 S120 72 150 74 S200 42 225 48 S270 22 300 16"/>
+              </svg>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Interactive product showcase ============ -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Product tour</span>
+          <h2 class="section-title">Take a look inside Fillo</h2>
+          <p class="section-lead">An interactive preview of the Fillo workspace. Swap these views for real product screenshots when they're ready.</p>
+        </div>
+
+        <div class="fshow reveal">
+          <div class="tabs fshow__tabs" role="tablist" aria-label="Fillo product views">
+            <button type="button" class="tab" role="tab" id="tab-fillo-overview" aria-controls="panel-fillo-overview" aria-selected="true"><svg class="icon icon--sm"><use href="#i-grid"/></svg>Overview</button>
+            <button type="button" class="tab" role="tab" id="tab-fillo-workflow" aria-controls="panel-fillo-workflow" aria-selected="false" tabindex="-1"><svg class="icon icon--sm"><use href="#i-layers"/></svg>Workflow</button>
+            <button type="button" class="tab" role="tab" id="tab-fillo-insights" aria-controls="panel-fillo-insights" aria-selected="false" tabindex="-1"><svg class="icon icon--sm"><use href="#i-chart"/></svg>Insights</button>
+          </div>
+
+          <div class="fshow__window">
+            <div class="fapp__bar">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="fapp__title"><span class="fillo-brand__mark fillo-brand__mark--sm"><svg class="icon"><use href="#i-layers"/></svg></span>Fillo</span>
+              <span class="fapp__sample">Sample data</span>
+            </div>
+
+            <!-- EDIT: replace each view with a real product screenshot or describe the real screen -->
+            <div class="fshow__panel" role="tabpanel" id="panel-fillo-overview" aria-labelledby="tab-fillo-overview" tabindex="0">
+              <div class="fshow__grid">
+                <div class="fshow__card fshow__card--wide">
+                  <div class="fshow__card-head"><strong>Activity over time</strong><small>Sample</small></div>
+                  <div class="fshow__bars" data-fshow-bars>
+                    <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:66%"></i><i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:62%"></i><i style="--h:84%"></i><i style="--h:70%"></i><i style="--h:92%"></i><i style="--h:80%"></i><i style="--h:96%"></i>
+                  </div>
+                </div>
+                <div class="fshow__card">
+                  <div class="fshow__card-head"><strong>Completion</strong><small>Sample</small></div>
+                  <div class="fring" style="--v:78"><svg viewBox="0 0 42 42" aria-hidden="true"><circle class="fring__track" cx="21" cy="21" r="15.915"/><circle class="fring__fill" cx="21" cy="21" r="15.915"/></svg><strong>78%</strong></div>
+                </div>
+                <div class="fshow__card"><small class="fshow__label">Metric A</small><strong class="fshow__num">1,280</strong><span class="fshow__delta">Sample</span></div>
+                <div class="fshow__card"><small class="fshow__label">Metric B</small><strong class="fshow__num">86%</strong><span class="fshow__delta">Sample</span></div>
+                <div class="fshow__card"><small class="fshow__label">Metric C</small><strong class="fshow__num">342</strong><span class="fshow__delta">Sample</span></div>
+              </div>
+            </div>
+
+            <div class="fshow__panel" role="tabpanel" id="panel-fillo-workflow" aria-labelledby="tab-fillo-workflow" tabindex="0" hidden>
+              <ol class="fflow" data-fflow>
+                <li class="fflow__step"><span class="fflow__icon"><svg class="icon"><use href="#i-plug"/></svg></span><div><strong>Step one</strong><small>Describe the first step in Fillo's workflow</small></div><span class="fflow__state">Done</span></li>
+                <li class="fflow__step"><span class="fflow__icon"><svg class="icon"><use href="#i-sliders"/></svg></span><div><strong>Step two</strong><small>Describe what happens next</small></div><span class="fflow__state">Done</span></li>
+                <li class="fflow__step"><span class="fflow__icon"><svg class="icon"><use href="#i-spark"/></svg></span><div><strong>Step three</strong><small>Describe the step Fillo automates</small></div><span class="fflow__state">Running</span></li>
+                <li class="fflow__step"><span class="fflow__icon"><svg class="icon"><use href="#i-check"/></svg></span><div><strong>Step four</strong><small>Describe the final outcome</small></div><span class="fflow__state">Queued</span></li>
+              </ol>
+            </div>
+
+            <div class="fshow__panel" role="tabpanel" id="panel-fillo-insights" aria-labelledby="tab-fillo-insights" tabindex="0" hidden>
+              <div class="fshow__grid fshow__grid--insights">
+                <div class="fshow__card fshow__card--wide">
+                  <div class="fshow__card-head"><strong>Trend</strong><small>Sample</small></div>
+                  <svg class="fshow__trend" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="fshow__trend-line" d="M0 96 C30 90 45 70 75 74 S120 50 150 56 S200 30 225 36 S270 16 300 10"/>
+                  </svg>
+                </div>
+                <div class="fshow__card">
+                  <div class="fshow__card-head"><strong>Breakdown</strong><small>Sample</small></div>
+                  <ul class="fsplit">
+                    <li><span>Category one</span><i style="--w:68%"></i><b>68%</b></li>
+                    <li><span>Category two</span><i style="--w:22%"></i><b>22%</b></li>
+                    <li><span>Category three</span><i style="--w:10%"></i><b>10%</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How Fillo works ============ -->
+    <section class="section section--alt" id="how-it-works">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How Fillo works</span>
+          <h2 class="section-title">From setup to results in four steps</h2>
+          <p class="section-lead">Replace these steps with Fillo's real onboarding or usage flow.</p>
+        </div>
+        <!-- EDIT: four steps -->
+        <div class="steps">
+          <div class="steps__line" aria-hidden="true"><span></span></div>
+          <ol class="steps__list">
+            <li class="step reveal"><span class="step__num">01</span><span class="step__icon"><svg class="icon"><use href="#i-plug"/></svg></span><h3>Step one</h3><p>Describe how a customer gets started with Fillo.</p></li>
+            <li class="step reveal" data-delay="1"><span class="step__num">02</span><span class="step__icon"><svg class="icon"><use href="#i-sliders"/></svg></span><h3>Step two</h3><p>Describe the setup or configuration step.</p></li>
+            <li class="step reveal" data-delay="2"><span class="step__num">03</span><span class="step__icon"><svg class="icon"><use href="#i-spark"/></svg></span><h3>Step three</h3><p>Describe what Fillo does automatically.</p></li>
+            <li class="step reveal" data-delay="3"><span class="step__num">04</span><span class="step__icon"><svg class="icon"><use href="#i-rocket"/></svg></span><h3>Step four</h3><p>Describe the result or outcome the customer sees.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Benefits & use cases ============ -->
+    <section class="section" id="use-cases">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Benefits &amp; use cases</span>
+          <h2 class="section-title">Built for the way your team works</h2>
+          <p class="section-lead">Show who Fillo is for and the results each team gets. Replace with Fillo's real audiences and outcomes.</p>
+        </div>
+        <!-- EDIT: three use cases (audience, short description, benefits) -->
+        <div class="fuses">
+          <article class="card glow-card fuse reveal">
+            <span class="fuse__tag">Use case 01</span>
+            <h3>Team or industry one</h3>
+            <p>Describe how this audience uses Fillo day to day.</p>
+            <ul class="checklist"><li><svg class="icon"><use href="#i-check"/></svg>Benefit for this audience</li><li><svg class="icon"><use href="#i-check"/></svg>Another concrete benefit</li></ul>
+          </article>
+          <article class="card glow-card fuse reveal" data-delay="1">
+            <span class="fuse__tag">Use case 02</span>
+            <h3>Team or industry two</h3>
+            <p>Describe how this audience uses Fillo day to day.</p>
+            <ul class="checklist"><li><svg class="icon"><use href="#i-check"/></svg>Benefit for this audience</li><li><svg class="icon"><use href="#i-check"/></svg>Another concrete benefit</li></ul>
+          </article>
+          <article class="card glow-card fuse reveal" data-delay="2">
+            <span class="fuse__tag">Use case 03</span>
+            <h3>Team or industry three</h3>
+            <p>Describe how this audience uses Fillo day to day.</p>
+            <ul class="checklist"><li><svg class="icon"><use href="#i-check"/></svg>Benefit for this audience</li><li><svg class="icon"><use href="#i-check"/></svg>Another concrete benefit</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Integrations (placeholder) ============ -->
+    <!-- EDIT: list Fillo's real integrations, or delete this section if Fillo has none -->
+    <section class="section section--alt" id="integrations">
+      <div class="container integrations">
+        <div class="reveal">
+          <span class="eyebrow">Integrations</span>
+          <h2 class="section-title">Connects with your existing tools</h2>
+          <p class="section-lead">If Fillo connects to other platforms, list them here. Each tile on the right is a slot for one integration's name and logo.</p>
+          <a href="#cta" class="btn btn--outline">Ask about integrations <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="fint reveal" data-delay="2">
+          <div class="fint__core" aria-hidden="true"><span class="fillo-brand__mark fillo-brand__mark--lg"><svg class="icon"><use href="#i-layers"/></svg></span></div>
+          <span class="fint__slot" style="--a:0deg">Integration</span>
+          <span class="fint__slot" style="--a:60deg">Integration</span>
+          <span class="fint__slot" style="--a:120deg">Integration</span>
+          <span class="fint__slot" style="--a:180deg">Integration</span>
+          <span class="fint__slot" style="--a:240deg">Integration</span>
+          <span class="fint__slot" style="--a:300deg">Integration</span>
+          <span class="fint__orbit" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container faq">
+        <div class="section-head section-head--left reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Questions about Fillo</h2>
+          <p class="section-lead">Something else on your mind? <a href="#cta" class="link">Talk to our team</a>.</p>
+        </div>
+        <div class="accordion reveal" data-delay="1" data-accordion>
+          <div class="acc-item is-open">
+            <button type="button" class="acc-trigger" aria-expanded="true" aria-controls="ffaq-1" id="ffaq-1-btn">What exactly is Fillo?<span class="acc-icon"><svg class="icon icon--sm"><use href="#i-plus"/></svg></span></button>
+            <div class="acc-panel" id="ffaq-1" role="region" aria-labelledby="ffaq-1-btn"><div><p>Fillo is the AI form filling and lead processing agent built by Telza AI.</p><p>It takes the leads you already collect and handles repetitive tasks such as filling forms, submitting records, checking supported TCPA and DNC data, retrying failed submissions, and updating connected workflows.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="ffaq-2" id="ffaq-2-btn">Does Fillo generate leads?<span class="acc-icon"><svg class="icon icon--sm"><use href="#i-plus"/></svg></span></button>
+            <div class="acc-panel" id="ffaq-2" role="region" aria-labelledby="ffaq-2-btn"><div><p>No.</p><p>Fillo works with leads you already have. Its job is to automate the work that happens after the lead enters your system.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="ffaq-3" id="ffaq-3-btn">Can Fillo fill web forms automatically?<span class="acc-icon"><svg class="icon icon--sm"><use href="#i-plus"/></svg></span></button>
+            <div class="acc-panel" id="ffaq-3" role="region" aria-labelledby="ffaq-3-btn"><div><p>Yes. Fillo can take lead information from your workflow and enter it into configured web forms automatically.</p><p>Your team does not need to type the same information for every lead.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="ffaq-4" id="ffaq-4-btn">What happens if a form submission fails?<span class="acc-icon"><svg class="icon icon--sm"><use href="#i-plus"/></svg></span></button>
+            <div class="acc-panel" id="ffaq-4" role="region" aria-labelledby="ffaq-4-btn"><div><p>Fillo can retry failed submissions automatically.</p><p>The job is logged so your team can see what happened and whether the retry was successful. If something still needs attention, it can be flagged for review.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="ffaq-5" id="ffaq-5-btn">How does Fillo check form submissions?<span class="acc-icon"><svg class="icon icon--sm"><use href="#i-plus"/></svg></span></button>
+            <div class="acc-panel" id="ffaq-5" role="region" aria-labelledby="ffaq-5-btn"><div><p>Fillo can log and check configured submissions after they are sent. If a submission fails, Fillo can retry the job and show the result to your team. This helps reduce the chance of failed submissions going unnoticed.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button type="button" class="acc-trigger" aria-expanded="false" aria-controls="ffaq-6" id="ffaq-6-btn">How do TCPA checks work?<span class="acc-icon"><svg class="icon icon--sm"><use href="#i-plus"/></svg></span></button>
+            <div class="acc-panel" id="ffaq-6" role="region" aria-labelledby="ffaq-6-btn"><div><p>Fillo can run supported TCPA checks automatically as part of the lead processing workflow. The result can then be used to decide whether the lead continues to the next step or needs to be flagged for review.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--cta" id="cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__grid" aria-hidden="true"></div>
+          <span class="eyebrow">Get started with Fillo</span>
+          <h2>See what Fillo can do for your business</h2>
+          <p>Leave your work email and our team will reach out to show you Fillo and answer your questions.</p>
+          <form class="cta-form" data-form="#cta-msg" data-success="Thanks! Our team will email you within one business day about Fillo." novalidate>
+            <label class="sr-only" for="cta-email">Work email</label>
+            <input type="email" id="cta-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+            <button type="submit" class="btn btn--primary">Book a demo <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </form>
+          <p class="form-msg" id="cta-msg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer (shared with homepage) ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo logo--footer">
+            <span class="logo__crop"><img src="assets/telza-logo.png" alt="Telza AI home" width="362" height="207" loading="lazy"></span>
+          </a>
+          <p>AI voice and WhatsApp agents that answer, call and close, around the clock.</p>
+          <div class="socials">
+            <a href="#" aria-label="Telza on LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+            <a href="#" aria-label="Telza on X"><svg class="icon"><use href="#i-x"/></svg></a>
+            <a href="#" aria-label="Telza on Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+            <a href="#" aria-label="Telza on YouTube"><svg class="icon"><use href="#i-youtube"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul class="footer__links">
+            <li><a href="ai-voice-agent.html">AI Voice Agents</a></li>
+            <li><a href="index.html#inbound">Inbound Calling</a></li>
+            <li><a href="index.html#outbound">Outbound Calling</a></li>
+            <li><a href="index.html#whatsapp">WhatsApp Automation</a></li>
+            <li><a href="fillo.html">Fillo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="index.html#how-it-works">How it works</a></li>
+            <li><a href="index.html#industries">Industries</a></li>
+            <li><a href="index.html#testimonials">Customers</a></li>
+            <li><a href="#cta">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#integrations">Integrations</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#cta">Book a demo</a></li>
+          </ul>
+        </div>
+        <div class="footer__news">
+          <h4>Stay in the loop</h4>
+          <p>Product updates and AI CX insights, once a month.</p>
+          <form class="newsletter" data-form="#news-msg" data-success="You're subscribed. Welcome aboard!" novalidate>
+            <label class="sr-only" for="news-email">Email address</label>
+            <input type="email" id="news-email" name="email" placeholder="Email address" autocomplete="email" required>
+            <button type="submit" class="btn btn--primary" aria-label="Subscribe"><svg class="icon"><use href="#i-arrow"/></svg></button>
+          </form>
+          <p class="form-msg" id="news-msg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="footer__wordmark" aria-hidden="true">telza</div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Telza. All rights reserved.</span>
+        <div class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top"><svg class="icon"><use href="#i-arrow"/></svg></button>
+
+</body>
+</html>
